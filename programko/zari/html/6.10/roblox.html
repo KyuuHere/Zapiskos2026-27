@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence psa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form class="dog-form">
+        <table>
+            <tr>
+                <th colspan="2" class="table-header">Evidence psa</th>
+            </tr>
+            <tr>
+                <th>Majitel psa:</th>
+                <td><input type="text" placeholder="Jméno majitele" id="owner" name="owner"></td>
+            </tr>
+            <tr>
+                <th>Jméno psa:</th>
+                <td><input type="text" placeholder="Jméno psa" id="dog" name="dog"></td>
+            </tr>
+            <tr>
+                <th>Věk psa:</th>
+                <td><input type="date" id="age" name="age"></td>
+            </tr>
+            <tr>
+                <th>Krajské město:</th>
+                <td>
+                    <select id="city" name="city">
+                        <option value="Praha">Praha</option>
+                        <option value="Brno">Brno</option>
+                        <option value="Ostrava">Ostrava</option>
+                        <option value="Plzeň">Plzeň</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>Pohlaví:</th>
+                <td>
+                    <label><input type="radio" id="male" name="gender" value="male"> pes</label>
+                    <label><input type="radio" id="female" name="gender" value="female"> fena</label>
+                </td>
+            </tr>
+            <tr>
+                <th>Rasa:</th>
+                <td><input type="text" placeholder="Rasa psa" id="breed" name="breed"></td>
+            </tr>
+            <tr>
+                <th>Barva:</th>
+                <td><input type="color" id="color" name="color"></td>
+            </tr>
+            <tr>
+                <th>Vlastnosti:</th>
+                <td class="traits">
+                    <label><input type="checkbox" id="trait1" name="trait1" value="hravy"> hravý</label>
+                    <label><input type="checkbox" id="trait2" name="trait2" value="pratelsky"> přátelský</label>
+                    <label><input type="checkbox" id="trait3" name="trait3" value="agresivni"> agresivní</label>
+                    <label><input type="checkbox" id="trait4" name="trait4" value="zdravy"> zdravý</label>
+                    <label><input type="checkbox" id="trait5" name="trait5" value="odvazny"> odvážný</label>
+                    <label><input type="checkbox" id="trait6" name="trait6" value="chytry"> chytrý</label>
+                    <label><input type="checkbox" id="trait7" name="trait7" value="laskavy"> laskavý</label>
+                    <label><input type="checkbox" id="trait8" name="trait8" value="hrdy"> hrdý</label>
+                </td>
+            </tr>
+            <tr>
+                <th></th>
+                <td class="actions">
+                    <input type="submit" value="Odeslat">
+                    <input type="reset" value="Vymazat">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
