@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulacka ktera funguje</title>
+
+</head>
+<body>
+    <h1>Kalkulačka</h1>
+<script>
+    const vystup = document.createElement("input");
+    vystup.type = "text";
+    vystup.readOnly = true;
+    document.body.appendChild(vystup);
+
+    const button1 = document.createElement("button");
+    button1.textContent = "1";
+    button1.type = "button";
+    button1.addEventListener("click", () => {
+        vystup.value += "1";
+    });
+    document.body.appendChild(button1);
+    const button2 = document.createElement("button");
+    button2.textContent = "2";
+    button2.type = "button";
+    button2.addEventListener("click", () => {
+        vystup.value += "2";
+    });
+    document.body.appendChild(button2);
+    const button3 = document.createElement("button");
+    button3.textContent = "3";
+    button3.type = "button";
+    button3.addEventListener("click", () => {
+        vystup.value += "3";
+    });
+    document.body.appendChild(button3);
+    const button4 = document.createElement("button");
+    button4.textContent = "4";
+    button4.type = "button";
+    button4.addEventListener("click", () => {
+        vystup.value += "4";
+    });
+    document.body.appendChild(button4);
+    const button5 = document.createElement("button");
+    button5.textContent = "5";
+    button5.type = "button";
+    button5.addEventListener("click", () => {
+        vystup.value += "5";
+    });
+    document.body.appendChild(button5);
+    const button6 = document.createElement("button");
+    button6.textContent = "6";
+    button6.type = "button";
+    button6.addEventListener("click", () => {
+        vystup.value += "6";
+    });
+    document.body.appendChild(button6);
+    const button7 = document.createElement("button");
+    button7.textContent = "7";
+    button7.type = "button";
+    button7.addEventListener("click", () => {
+        vystup.value += "7";
+    });
+    document.body.appendChild(button7);
+    const button8 = document.createElement("button");
+    button8.textContent = "8";
+    button8.type = "button";
+    button8.addEventListener("click", () => {
+        vystup.value += "8";
+    });
+    document.body.appendChild(button8);
+    const button9 = document.createElement("button");
+    button9.textContent = "9";
+    button9.type = "button";
+    button9.addEventListener("click", () => {
+        vystup.value += "9";
+    });
+    document.body.appendChild(button9);
+    const button0 = document.createElement("button");
+    button0.textContent = "0";
+    button0.type = "button";
+    button0.addEventListener("click", () => {
+        vystup.value += "0";
+    });
+    document.body.appendChild(button0);
+    const buttonPlus = document.createElement("button");
+    buttonPlus.textContent = "+";
+    buttonPlus.type = "button";
+    buttonPlus.addEventListener("click", () => {
+        vystup.value += "+";
+    });
+    document.body.appendChild(buttonPlus);
+
+    const buttonDeleno = document.createElement("button");
+    buttonDeleno.textContent = "/";
+    buttonDeleno.type = "button";
+    buttonDeleno.addEventListener("click", () => {
+        vystup.value += "/";
+    });
+    document.body.appendChild(buttonDeleno);
+    const buttonKrat = document.createElement("button");
+    buttonKrat.textContent = "*";
+    buttonKrat.type = "button";
+    buttonKrat.addEventListener("click", () => {
+        vystup.value += "*";
+    });
+    document.body.appendChild(buttonKrat);
+    const buttonMinus = document.createElement("button");
+    buttonMinus.textContent = "-";
+    buttonMinus.type = "button";
+    buttonMinus.addEventListener("click", () => {
+        vystup.value += "-";
+    });
+    document.body.appendChild(buttonMinus);
+    const buttonRovnaSe = document.createElement("button");
+    buttonRovnaSe.textContent = "=";
+    buttonRovnaSe.type = "button";
+    buttonRovnaSe.addEventListener("click", () => {
+        try {
+            vystup.value = eval(vystup.value);
+        } catch (error) {
+            vystup.value = "Chyba";
+        }
+    });
+    document.body.appendChild(buttonRovnaSe);
+    const buttonClear = document.createElement("button");
+    buttonClear.textContent = "C";
+    buttonClear.type = "button";
+    buttonClear.addEventListener("click", () => {
+        vystup.value = "";
+    });
+    document.body.appendChild(buttonClear);
+    
+</script>
+
+<style>
+    :root {
+  color-scheme: light;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #eef2f7;
+  color: #172033;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: min(100% - 32px, 360px);
+  margin: 8vh auto;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  align-content: start;
+  background: #fff;
+  border: 1px solid #e1e7f0;
+  border-radius: 20px;
+  box-shadow: 0 18px 50px rgb(26 44 76 / 12%);
+}
+
+h1 {
+  grid-column: 1 / -1;
+  margin: 0 0 6px;
+  text-align: center;
+  font-size: 1.65rem;
+  letter-spacing: -0.04em;
+}
+
+input {
+  grid-column: 1 / -1;
+  width: 100%;
+  min-width: 0;
+  height: 68px;
+  margin-bottom: 8px;
+  padding: 12px 16px;
+  border: 1px solid #d9e1ed;
+  border-radius: 12px;
+  background: #f7f9fc;
+  color: #172033;
+  font: 600 1.8rem/1 system-ui, sans-serif;
+  text-align: right;
+  box-shadow: inset 0 1px 2px rgb(20 35 60 / 5%);
+}
+
+button {
+  min-height: 58px;
+  border: 0;
+  border-radius: 12px;
+  background: #edf1f7;
+  color: #25324a;
+  font: 600 1.2rem/1 system-ui, sans-serif;
+  cursor: pointer;
+  transition: background-color 140ms ease, transform 140ms ease, box-shadow 140ms ease;
+}
+
+button:hover {
+  background: #dfe7f2;
+  box-shadow: 0 4px 10px rgb(26 44 76 / 10%);
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid #7ba7ff;
+  outline-offset: 2px;
+}
+
+/* Zvýraznění operátorů podle jejich pořadí v HTML. */
+button:nth-of-type(n + 11):nth-of-type(-n + 14) {
+  background: #e4edff;
+  color: #2457b8;
+}
+
+button:nth-of-type(15) {
+  background: #2864d7;
+  color: #fff;
+}
+
+button:nth-of-type(15):hover {
+  background: #1f55bd;
+}
+
+button:nth-of-type(16) {
+  background: #fff0ed;
+  color: #b43e2c;
+}
+
+@media (max-width: 380px) {
+  body {
+    width: min(100% - 20px, 360px);
+    padding: 18px;
+    gap: 8px;
+  }
+
+  button {
+    min-height: 54px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}
+
+</style>
+
+</body>
+</html>
